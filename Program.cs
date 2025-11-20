@@ -51,7 +51,7 @@ namespace CleanCalc
         public static double Sqrt(double a)
         {
             if (a < 0)
-                throw new ArgumentException("No se puede hacer ra韟 cuadrada de un n鷐ero negativo.");
+                throw new ArgumentException("No se puede hacer ra铆z cuadrada de un n煤mero negativo.");
             return Math.Sqrt(a);
         }
     }
@@ -70,7 +70,7 @@ namespace CleanCalc
             while (!exit)
             {
                 PrintMenu();
-                Console.Write("Opci髇: ");
+                Console.Write("Opci贸n: ");
                 string opt = Console.ReadLine()?.Trim();
 
                 switch (opt)
@@ -82,12 +82,12 @@ namespace CleanCalc
                     case "5": HandleBinaryOperation("^", Calculator.Power); break;
                     case "6": HandleBinaryOperation("%", Calculator.Mod); break;
                     case "7": HandleUnaryOperation("sqrt", Calculator.Sqrt); break;
-                    case "8": Console.WriteLine("Funci髇 LLM eliminada por seguridad."); break;
+                    case "8": Console.WriteLine("Funci贸n LLM eliminada por seguridad."); break;
                     case "9": ShowHistory(); break;
                     case "0": exit = true; break;
 
                     default:
-                        Console.WriteLine("Opci髇 inv醠ida.");
+                        Console.WriteLine("Opci贸n inv谩lida.");
                         break;
                 }
 
@@ -95,7 +95,7 @@ namespace CleanCalc
             }
 
             SaveHistoryToFile();
-            Console.WriteLine("Adi髎.");
+            Console.WriteLine("Adi贸s.");
         }
 
         private static void PrintMenu()
@@ -106,8 +106,8 @@ namespace CleanCalc
             Console.WriteLine("3) Multiplicar");
             Console.WriteLine("4) Dividir");
             Console.WriteLine("5) Potencia");
-            Console.WriteLine("6) M骴ulo");
-            Console.WriteLine("7) Ra韟 cuadrada");
+            Console.WriteLine("6) M贸dulo");
+            Console.WriteLine("7) Ra铆z cuadrada");
             Console.WriteLine("8) LLM (deshabilitado)");
             Console.WriteLine("9) Historial");
             Console.WriteLine("0) Salir");
@@ -160,7 +160,7 @@ namespace CleanCalc
                 if (double.TryParse(input, NumberStyles.Any, CultureInfo.InvariantCulture, out double value))
                     return value;
 
-                Console.WriteLine("Entrada inv醠ida. Intente nuevamente.");
+                Console.WriteLine("Entrada inv谩lida. Intente nuevamente.");
             }
         }
 
